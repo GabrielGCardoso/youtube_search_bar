@@ -8,36 +8,74 @@
     </head>
     <body>
         <div class="wrapper">
-            <input id="searchQuery" class="inputStyle" autofocus type="text" />
             <button class="buttonStyle" id="btnSearch">
-                <img src="loupe.svg" width="17px" />
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-search"
+                >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
             </button>
+            <input id="searchQuery" class="inputStyle" autofocus type="text" />
+            <label class="labelExtension">youtube search bar</label>
         </div>
     </body>
 </html>
 <style>
-    input[type='text'] {
+    input[type="text"] {
         font-family: monospace;
         font-size: 15px;
     }
     .wrapper {
-        display: block;
+        position: relative;
+        display: flex;
         width: 300px;
+        padding: 15px 10px 22px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
     .inputStyle {
-        width: 80%;
-        border-radius: 5px;
-        height: 22px;
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 5px 10px;
+        background: #fafafa;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+        border-left-width: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
     .buttonStyle {
-        border-radius: 5px;
-        background-color:gainsboro;
-        opacity:0.5;
-        content: url(./loupe.svg);
-        width: 30px;
-        float: left;
-        margin-right: 5px;
-        margin-top: 1px;
-        margin-bottom: 2px;
+        color: #ffffff;
+        outline: none;
+        flex-shrink: 0;
+        width: 44px;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        background-color: #ff0000;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .labelExtension {
+        position: absolute;
+        right: 15px;
+        bottom: 7px;
+        font-family: monospace;
+        font-size: 10px;
+        line-height: 10px;
     }
 </style>
